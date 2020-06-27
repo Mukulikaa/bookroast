@@ -85,17 +85,11 @@ def login():
     if form.validate_on_submit():
         try:
             user = users.query.filter_by(username=form.username.data).first_or_404()
-            print("reached")
             if (form.password.data==user.password):
-                print("reached")
                 user.authenticated = True
-                print("reached")
                 #db.session.add(user)
-                print("reached")
                 db.session.commit()
-                print("reached")
                 login_user(user)
-                print("reached")
                 if form.remember_me.data==True:
                     session.permanent = True
                 return redirect(url_for("index1"))
