@@ -139,6 +139,10 @@ def search():
     for a in author:
         data.append(a)
     print(data)
+    isbn = books.query.filter(books.ISBN.contains(term)).all()
+    for i in isbn:
+        data.append(i)
+    print(data)
     return render_template('books.html', data=data)
 
 @app.route("/isbn/<string:isbn>", methods=['GET','POST'])
