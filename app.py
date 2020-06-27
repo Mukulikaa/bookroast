@@ -123,7 +123,7 @@ def logout():
     logout_user()
     return redirect("/")
 
-@app.route("/search", methods=["GET","POST"])
+@app.route("/results", methods=["GET","POST"])
 @login_required
 def search():
     global data
@@ -139,11 +139,6 @@ def search():
     for a in author:
         data.append(a)
     print(data)
-    return redirect(url_for('results'))
-
-@app.route("/results")
-@login_required
-def results():
     return render_template('books.html', data=data)
 
 @app.route("/isbn/<string:isbn>", methods=['GET','POST'])
