@@ -1,0 +1,50 @@
+.jumbotron.jumbotron-fluid {
+    background-image: url("images/jumbotronbg.jpg");
+    background-color: violet;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-size: cover;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 100px;
+}
+  
+.jumbotron h1 {
+    font-size: 130px;
+}
+
+#about {
+  margin-top: -33px;
+  padding: 10px;
+}
+
+.name-title {
+  font-size: 35px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container-fluid .about-me {
+  color: #0D122B;
+  padding-top: 25px;
+  margin: 0px auto;
+}
+
+.about-button.btn-light {
+  font-size: 15px;
+  font-weight: 500;
+  color: #FFFFFF;
+  background-color: #0D122B;
+}
+
+.input-group.md-form.form-sm.form-1 input{
+  border: 2px solid #bdbdbd;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+#info{
+  padding: 50px;
+  width: 2000px;
+}

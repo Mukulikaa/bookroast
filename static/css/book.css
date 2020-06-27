@@ -1,0 +1,14 @@
+#about{
+    padding: 50px;
+}
+
+.green-border-focus .form-control:focus {
+    border: 1px solid #8bc34a;
+    box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, .25);
+}
+#review{
+    width: 1150px;
+}
+#space{
+    margin-top: 50px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block content %}
+<head><link rel="stylesheet" href="{{ url_for('static', filename='css/book.css') }}"></head>
+<body>
+    <div class="container-fluid" id="about">
+        <div class="row">
+          <div class="col-md-6 about-me text-left">
+            <h1 class="name-title">{{book.title}}</h1><br>
+            <h3 class="name-title">{{book.author}}</h3><br>
+            <h6 class="name-title"> Published in {{book.pub_year}}</h6>
+            <br>
+            <div class="about-text">
+              <p>
+                Average Rating: {{ book.ratings }}
+              </p><br>
+            </div>
+            {% if review != '[]' %}
+            <div class="review p-5" id="review">
+              <div class="row d-flex" style="width: 850px;">
+                <div class="d-flex flex-column flex-row pl-2">
+                  {% for r in review %}
+                      <h6>{{ r.username }}</h6>
+                      <p>{{ r.review }}</p>
+                      <br>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            <form action="{{url_for('book', isbn = book.ISBN)}}" method="POST">
+            <div class="form-group green-border-focus" id="space">
+                <label for="review">Your Review: {{ message }} </label>
+                <textarea style="width: 900px; height: 150px;" class="form-control" name="review" placeholder="This book is awesome but..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-light about-button" role="button">Submit</button>
+            </form>
+          </div>
+        </div>
+    </div>    
+</body>
+
+{% endblock %}

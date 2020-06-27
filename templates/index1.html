@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block content %}
+    <head><link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"></head>
+    <body>
+    
+      <div class="container-fluid" id="info">
+        <div class="col-md-6 text-left">
+          <div class="row">
+            <br><br>
+            <h1>Top Books Rated by Goodreads</h1>
+            <table class="table table-striped"">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">ISBN</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Author</th>
+                  <th scope="col">Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {% for b in book %}
+                  <tr>
+                      <td>{{ b.ISBN }}</td>
+                      <td><a href="{{ url_for('book', isbn = b.ISBN) }}">{{ b.title }}</a></td>
+                      <td><a>{{ b.author }}</a></td>
+                      <td>{{b.ratings}}</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+        
+{% endblock %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% block content %}
+    <head>
+        <head><link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}"></head>
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid">
+                <h3>Sign Up</h3>
+                <div>
+                    <p>{{ error }}</p>
+                </div>
+                <form action="{{url_for('register')}}" method="POST" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}
+                    <p>
+                        {{ form.fname.label }}<br>
+                        {{ form.fname(size=32) }}
+                    </p>
+                    <p>
+                        {{ form.lname.label }}<br>
+                        {{ form.lname(size=32) }}
+                    </p>
+                    <p>
+                        {{ form.username.label }}<br>
+                        {{ form.username(size=32) }}
+                    </p>
+                    <p>
+                        {{ form.password.label }}<br>
+                        {{ form.password(size=32) }}
+                    </p>
+                    <p>
+                        {{ form.confirm.label }}<br>
+                        {{ form.confirm(size=32) }}
+                    </p>
+                    <p>{{ form.submit() }}</p>
+                </form>
+            </div>
+        </div>
+{% endblock %}

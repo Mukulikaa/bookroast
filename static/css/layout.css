@@ -1,0 +1,73 @@
+.nav.navbar-nav a {
+    color: white;
+}
+  
+.navbar-default .navbar-nav li {
+   font-size: 1.1rem;
+   font-weight: bold;
+}
+  
+@media only screen and (max-width: 768px) {
+    nav img {
+      display: none;
+    }
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #5c69a7;
+}
+
+.footer-social-icons {
+    display: block;
+    padding-top: 5px;
+}
+  
+.social-icons {
+    color: #fff;
+}
+  
+.social-icons li {
+    display: inline;
+}
+  
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+}
+
+#searchbar{
+    margin-top: 150px;
+    padding: 10px;
+}
+
+.about-button.btn-light {
+    font-size: 15px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: #0D122B;
+}
+
+footer .footer .fa-linkedin {
+    padding: 10px 14px;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 12px;
+    border: 1px solid #0073a4;
+}
+  
+.footer .social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0px;
+}
+  
