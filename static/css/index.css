@@ -10,6 +10,12 @@
     color: rgb(255, 255, 255);
     margin-top: 100px;
 }
+
+@media only screen and (max-width: 768px) {
+  .jumbotron.jumbotron-fluid {
+    text-align: left;
+  }
+}
   
 .jumbotron h1 {
     font-size: 130px;
