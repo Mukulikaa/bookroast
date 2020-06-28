@@ -31,7 +31,7 @@
             <form action="{{url_for('book', isbn = book.ISBN)}}" method="POST">
             <div class="form-group green-border-focus" id="space">
                 <label for="review">Your Review: {{ message }} </label>
-                <textarea style="width: 900px; height: 150px;" class="form-control" name="review" placeholder="This book is awesome but..."></textarea>
+                <textarea style="height: 150px;" class="form-control" name="review" placeholder="This book is awesome but..."></textarea>
             </div>
             <button type="submit" class="btn btn-light about-button" role="button">Submit</button>
             </form>
